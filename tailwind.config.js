@@ -4,27 +4,37 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
+        orange: {
+          300: '#FE7B02',
+          400: '#FF9533',
+        },
         gray: {
-          500: '#272739',
-          600: '#343346',
-          700: '#2D2C41',
-          800: '#313045',
+          24: '#242222',
         },
         blue: {
-          400: '#5DAAE2',
-          500: '#2A65FC',
+          24: '#3A9BD5',
         },
-        orange: {
-          400: '#FF7A00',
-          500: '#DC2828',
+        red: {
+          24: '#FE3030',
         },
+      },
+      width: {
+        60: '60px',
+        74: '74px',
+        374: '374px',
+      },
+      height: {
+        30: '30px',
+        37: '37px',
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      scale: ['active'],
+      borderWidth: ['hover', 'focus'],
+      borderColor: ['active', 'focus'],
+    },
   },
   plugins: [],
 };

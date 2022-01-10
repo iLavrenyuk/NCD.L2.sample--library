@@ -1,13 +1,80 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .near-logo-img {
+    width: 93px;
+    height: 116px;
+  }
+  .main-book {
+    min-height: 282px;
+    width: 323px;
+  }
+  .w-alert {
+    width: 312px;
+  }
+  .pulsing {
+    animation: pulsing 1s infinite;
+  }
+  @keyframes pulsing {
+    from {
+      width: 0px;
+      height: 0px;
+    }
+    50% {
+      width: 74px;
+      height: 37px;
+    }
+    to {
+      width: 0px;
+      height: 0px;
+    }
+  }
+  @screen md {
+    .near-logo-img {
+      width: px;
+    }
+    .main-book {
+      min-height: 282px;
+      width: 376px;
+    }
+    .w-alert {
+      width: 498px;
+    }
+  }
+  @screen lg {
+    .near-logo-img {
+      width: 140px;
+      height: 175px;
+    }
+    .main-book {
+      min-height: 376px;
+      width: 431px;
+    }
+  }
+  @screen xl {
+    .main-book {
+      min-height: 451px;
+      width: 516px;
+    }
+  }
+  @screen 2xl {
+    .main-book {
+      min-height: 469px;
+      width: 646px;
+    }
+  }
 }
