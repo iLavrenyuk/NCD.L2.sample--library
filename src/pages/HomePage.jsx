@@ -1,11 +1,12 @@
 import React from 'react';
 import { Pagination } from '../components/Pagination';
 import { TitleBlock } from '../components/blocks/Title';
+import { ChangeContract } from '../components/ChangeContract';
 
 export const HomePage = () => {
   return (
     <div>
-      {/* <Deploy /> */}
+      <ChangeContract />
 
       <TitleBlock />
 
