@@ -6,8 +6,8 @@ export const TitleBlock = () => {
     <div className="relative overflow-hidden w-full h-auto lg:h-screen">
       <TitleDecoration />
 
-      <div className="flex flex-col items-center px-6">
-        <img src={require('../../../assets/img/near_logo_stack_2.png')} alt="" className="near-logo-img lg:mt-12" />
+      <div className="flex flex-col items-center px-6 mt-16">
+        <img src={require('../../assets/img/near_logo_stack_2.png')} alt="" className="near-logo-img lg:mt-12" />
 
         <h1 className="text-4xl lg:text-6xl font-bold">NEAR Library</h1>
 
@@ -31,7 +31,7 @@ export const TitleBlock = () => {
         </div>
 
         <div className="lg:hidden relative z-10 flex justify-center">
-          <img src={require('../../../assets/img/main.png')} alt="" />
+          <img src={require('../../assets/img/main.png')} alt="" />
         </div>
       </div>
     </div>

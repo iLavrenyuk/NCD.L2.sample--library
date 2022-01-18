@@ -10,7 +10,7 @@ export const near = new Near({
   walletUrl: 'https://wallet.testnet.near.org',
 });
 
-export const wallet = new WalletConnection(near, 'communite');
+export const wallet = new WalletConnection(near, 'library');
 
 export const signIn = (successUrl) => {
   const CONTRACT_ID = localStorage.getItem('CONTRACT_ID');

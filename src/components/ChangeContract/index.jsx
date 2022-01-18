@@ -22,7 +22,7 @@ export const ChangeContract = () => {
   };
 
   return (
-    <div className="relative w-full flex flex-col items-center">
+    <div className="fixed w-full flex flex-col items-center z-10">
       {!isOpen ? (
         <>
           <div className="absolute z-10 w-74 h-37 bg-gradient-to-r from-orange-400 to-orange-400 rounded-b-full opacity-50 pulsing"></div>
@@ -104,7 +104,7 @@ export const ChangeContract = () => {
                 type="text"
                 placeholder="Set your contract ID"
                 className={`w-full h-14 mt-4 rounded-3xl outline-none border ${
-                  !apiError ? 'border-red-24 focus:border-red-24' : 'focus:border-blue-24'
+                  apiError ? 'border-red-24 focus:border-red-24' : 'focus:border-blue-24'
                 } pl-7 pr-2 font-medium placeholder-gray-400`}
               />
             </div>
