@@ -22,63 +22,22 @@ export const signOut = () => {
   return wallet.signOut(CONTRACT_ID);
 };
 
-export const getComplaints = () => {
+export const getBooks = () => {
   const CONTRACT_ID = localStorage.getItem('CONTRACT_ID');
-  return wallet.account().viewFunction(CONTRACT_ID, 'getComplaints');
+  return wallet.account().viewFunction(CONTRACT_ID, 'getBooks');
 };
 
-export const alreadyVoted = (userId) => {
+export const getBook = (id) => {
   const CONTRACT_ID = localStorage.getItem('CONTRACT_ID');
-  return wallet.account().viewFunction(CONTRACT_ID, 'hasAlreadyVoted', { accountId: userId });
+  return wallet.account().viewFunction(CONTRACT_ID, 'getBook', { id });
 };
 
-//function to add new complaint
-export const addNewComplaint = ({ title, description, category, location }) => {
+export const addBook = ({ isbn, name, description, numpage, author, datepublished, editions }) => {
   const CONTRACT_ID = localStorage.getItem('CONTRACT_ID');
   return wallet.account().functionCall({
     contractId: CONTRACT_ID,
-    methodName: 'addNewComplaint',
+    methodName: 'AddBook',
     gas,
-    args: { title, description, category, location },
+    args: { isbn, name, description, numpage, author, datepublished, editions },
   });
 };
-
-//function to vote
-export const voteComplaint = (id) => {
-  const CONTRACT_ID = localStorage.getItem('CONTRACT_ID');
-  return wallet.account().functionCall({
-    contractId: CONTRACT_ID,
-    methodName: 'voteComplaint',
-    args: { id: id },
-  });
-};
-
-//function to remove vote
-export const removeVote = (id) => {
-  const CONTRACT_ID = localStorage.getItem('CONTRACT_ID');
-  return wallet.account().functionCall({
-    contractId: CONTRACT_ID,
-    methodName: 'removeVote',
-    args: { id: id },
-  });
-};
-
-// export const takeComplaint = ({id}) => {
-//   console.log(id)
-//   return wallet.account().functionCall({
-//       contractId: CONTRACT_ID,
-//       methodName: "takeComplaint",
-//       gas,
-//       args: {id}
-//   })
-// }
-
-// export const finishComplaint = ({id}) => {
-//   console.log(id)
-//   return wallet.account().functionCall({
-//       contractId: CONTRACT_ID,
-//       methodName: "finishComplaint",
-//       gas,
-//       args: {id}
-//   })
-// }

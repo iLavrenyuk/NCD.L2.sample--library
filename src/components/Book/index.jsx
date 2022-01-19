@@ -1,9 +1,13 @@
+import BN from 'bn.js';
 import React from 'react';
+import moment from 'moment';
 import { ReactComponent as StarSvg } from '../../assets/svg/star.svg';
 import { ReactComponent as UserSvg } from '../../assets/svg/user.svg';
 import { ReactComponent as ClockSvg } from '../../assets/svg/clock.svg';
 
-export const Book = () => {
+export const Book = ({ owner, name, description, totalPages, author, timestamp }) => {
+  const time = moment(new BN(timestamp) / 1000 / 1000).format('DD.MM.YYYY');
+
   return (
     <div className="mt-4">
       <a href="#">
@@ -33,11 +37,11 @@ export const Book = () => {
       </div>
 
       <a href="#" className="text-lg font-bold mt-3">
-        Small brave moves
+        {name}
       </a>
 
       <p className="text-sm mt-1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim
+        {description}
         <a
           href="#"
           className="inline-block text-sm text-transparent font-bold bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300 transform hover:scale-105 active:scale-100 duration-100"
@@ -49,11 +53,11 @@ export const Book = () => {
       <div className="flex mt-5">
         <div className="flex w-1/2">
           <p className="font-bold">Pages:</p>
-          <p className="ml-1">546</p>
+          <p className="ml-1">{totalPages}</p>
         </div>
         <div className="flex w-1/2">
           <p className="font-bold">Author:</p>
-          <p className="ml-1">Nicole Bianchi da Silva</p>
+          <p className="ml-1">{author}</p>
         </div>
       </div>
 
@@ -62,13 +66,13 @@ export const Book = () => {
           <span className="mr-2 w-5 h-5">
             <UserSvg />
           </span>
-          ilavreniuk2.testnet
+          {owner}
         </a>
         <p className="flex items-center">
           <span className="mr-2 w-5 h-5">
             <ClockSvg />
           </span>
-          22.05.2021
+          {time}
         </p>
       </div>
     </div>

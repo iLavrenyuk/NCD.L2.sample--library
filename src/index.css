@@ -77,4 +77,21 @@ code {
       width: 646px;
     }
   }
+
+}
+.loader {
+  position: absolute !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  height: 70px;
+  width: 70px;
+  top: 182px;
+  left: calc(50% - 35px);
+  border-radius: 20px;
+  overflow: hidden;
+}
+._loading_overlay_spinner {
+  margin: 0 !important;
 }
