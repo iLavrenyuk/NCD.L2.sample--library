@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { routes } from '../../router/routes';
 import { TitleDecoration } from './TitleDecoration';
 
 export const TitleBlock = () => {
@@ -25,9 +27,12 @@ export const TitleBlock = () => {
             </div>
           </button>
 
-          <button className="flex items-center justify-center w-72 h-14 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300 hover:from-gray-300 hover:to-gray-300 transform active:scale-95 duration-100">
+          <Link
+            to={routes.ViewBook}
+            className="flex items-center justify-center w-72 h-14 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300 hover:from-gray-300 hover:to-gray-300 transform active:scale-95 duration-100"
+          >
             Add book +
-          </button>
+          </Link>
         </div>
 
         <div className="lg:hidden relative z-10 flex justify-center">

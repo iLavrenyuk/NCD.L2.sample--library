@@ -1,7 +1,7 @@
 import BN from 'bn.js';
 import React from 'react';
 import moment from 'moment';
-import { ReactComponent as StarSvg } from '../../assets/svg/star.svg';
+import { RateBook } from '../RateBook';
 import { ReactComponent as UserSvg } from '../../assets/svg/user.svg';
 import { ReactComponent as ClockSvg } from '../../assets/svg/clock.svg';
 
@@ -18,23 +18,7 @@ export const Book = ({ owner, name, description, totalPages, author, timestamp }
         />
       </a>
 
-      <div className="flex mt-2">
-        <span className="cursor-pointer transform hover:scale-125 duration-150 hover:shadow-2xl hover:mr-0.5">
-          <StarSvg />
-        </span>
-        <span className="cursor-pointer transform hover:scale-125 duration-150 hover:shadow-2xl hover:mx-0.5">
-          <StarSvg />
-        </span>
-        <span className="cursor-pointer transform hover:scale-125 duration-150 hover:shadow-2xl hover:mx-0.5">
-          <StarSvg />
-        </span>
-        <span className="cursor-pointer transform hover:scale-125 duration-150 hover:shadow-2xl hover:mx-0.5">
-          <StarSvg />
-        </span>
-        <span className="cursor-pointer transform hover:scale-125 duration-150 hover:shadow-2xl hover:mx-0.5">
-          <StarSvg />
-        </span>
-      </div>
+      <RateBook rate={5} />
 
       <a href="#" className="text-lg font-bold mt-3">
         {name}

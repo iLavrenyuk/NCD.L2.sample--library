@@ -1,5 +1,4 @@
 import React from 'react';
-import { Footer } from '../components/Footer';
 import { TitleBlock } from '../components/Title';
 import { TopBooks } from '../components/TopBooks';
 import { AllBooks } from '../components/AllBooks';
@@ -39,8 +38,6 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
