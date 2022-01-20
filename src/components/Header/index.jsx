@@ -20,7 +20,7 @@ export const Header = () => {
   return (
     <nav className="absolute w-full top-0 z-10">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between py-8">
+        <div className="flex flex-col md:flex-row items-center justify-between mt-8">
           <Link to={routes.Home} className="flex items-center">
             <img src={require('../../assets/img/near_logo_stack_1.png')} alt="" />
             <span className="block w-0.5 h-12 ml-1 mr-2 rounded-full bg-black"></span>

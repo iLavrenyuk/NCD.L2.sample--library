@@ -28,7 +28,7 @@ export const TitleBlock = () => {
           </button>
 
           <Link
-            to={routes.ViewBook}
+            to={routes.AddBook}
             className="flex items-center justify-center w-72 h-14 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300 hover:from-gray-300 hover:to-gray-300 transform active:scale-95 duration-100"
           >
             Add book +
